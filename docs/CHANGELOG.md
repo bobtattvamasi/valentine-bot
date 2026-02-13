@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.1 — Pre-release Cleanup
+- Обновлены docs/TASKS.md и docs/CONTENT.md
+- Добавлен .idea/ в .gitignore
+- Удалён bot/.env из отслеживания git
+
 ## v1.2.0 — Webhook Migration For Vercel
 - Добавлен serverless entrypoint `api/webhook.py` для Telegram webhook (без `python-telegram-bot`)
 - Обработка `/start` перенесена на прямой вызов Telegram Bot API `sendMessage`

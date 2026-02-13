@@ -1,5 +1,9 @@
 {
-  "rewrites": [
+  "builds": [
+    { "src": "api/webhook.py", "use": "@vercel/python" },
+    { "src": "webapp/**", "use": "@vercel/static" }
+  ],
+  "routes": [
     { "src": "/api/webhook", "dest": "/api/webhook.py" },
     { "src": "/style.css", "dest": "/webapp/style.css" },
     { "src": "/script.js", "dest": "/webapp/script.js" },

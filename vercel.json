@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "src": "/api/webhook", "dest": "/api/webhook.py" },
+    { "src": "/style.css", "dest": "/webapp/style.css" },
+    { "src": "/script.js", "dest": "/webapp/script.js" },
+    { "src": "/(.*)", "dest": "/webapp/index.html" }
+  ]
+}

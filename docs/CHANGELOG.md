@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.2.0 — Webhook Migration For Vercel
+- Добавлен serverless entrypoint `api/webhook.py` для Telegram webhook (без `python-telegram-bot`)
+- Обработка `/start` перенесена на прямой вызов Telegram Bot API `sendMessage`
+- Конфигурация перенесена в корневой `vercel.json` (rewrites для API и `webapp/*`)
+- Добавлен корневой `requirements.txt` с `httpx==0.27.0` для Python function на Vercel
+- Удалён `webapp/vercel.json` как устаревший после переноса конфига в корень
+
 ## v1.1.0 — MVP Scaffold Refresh
 - Добавлен `bot/main.py` на `python-telegram-bot==20.7` с командами `/start` и `/help`
 - Подключены `.env` переменные (`BOT_TOKEN`, `WEBAPP_URL`) через `python-dotenv`
